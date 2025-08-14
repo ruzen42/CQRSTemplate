@@ -1,0 +1,2 @@
+# CQRSTemplate
+CQRS Template MediatR 
