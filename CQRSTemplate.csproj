@@ -1,13 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>CqrsTemplate</PackageId>
+    <Title>CQRS MediatR Template</Title>
+    <Description>Simple CQRS + MediatR templates library</Description>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>ruzen42</Authors>
+    <PackageProjectUrl>https://github.com/ruzen42/CQRSTemplate</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ruzen42/CQRSTemplate</RepositoryUrl>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <PackageTags>CQRS, MediatR, Commands, Queries</PackageTags>
+    <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="13.0.0" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
