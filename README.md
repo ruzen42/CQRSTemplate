@@ -46,7 +46,7 @@ dotnet add package CQRS.Template
 
 📂 Interfaces
 ICommand
-```
+```CSharp
 public interface ICommand : ICommand<Unit>;
 public interface ICommand<out TResponse> : IRequest<TResponse>;
 
@@ -74,11 +74,11 @@ Represents a read-only request for retrieving data without modifying the system 
 📌 Example
 
 // Command
-```
+```CSharp
 public record CreateUserCommand(string Name) : ICommand<Guid>;
 ```
 // Command Handler
-```
+```CSharp
 public class CreateUserHandler : ICommandHandler<CreateUserCommand, Guid>
 {
     public async Task<Guid> Handle(CreateUserCommand command, CancellationToken cancellationToken)
@@ -90,11 +90,11 @@ public class CreateUserHandler : ICommandHandler<CreateUserCommand, Guid>
 }
 ```
 // Query
-```
+```CSharp
 public record GetUserQuery(Guid Id) : IQuery<UserDto>;
 ```
-// Query Handler
-```
+// QueryHandler
+```CSharp
 public class GetUserHandler : IRequestHandler<GetUserQuery, UserDto>
 {
     public async Task<UserDto> Handle(GetUserQuery query, CancellationToken cancellationToken)
